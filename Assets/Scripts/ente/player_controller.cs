@@ -11,12 +11,14 @@ public class player_controller : MonoBehaviour
     public int mCollectibleCount;
     public Text count;
 
+    public Babies babiesScript;
+
     // Start is called before the first frame update
     private void Start()
     {
         m_rigidbody = gameObject.GetComponent<Rigidbody>();
-        mCollectibleCount = GameObject.FindGameObjectsWithTag("collectable").Length;
-        count.text = mCollectibleCount.ToString();
+        mCollectibleCount = GameObject.FindGameObjectsWithTag("babies").Length;
+     //   count.text = mCollectibleCount.ToString();
     }
 
     // Update is called once per frame
@@ -33,11 +35,14 @@ public class player_controller : MonoBehaviour
     private void OnTriggerEnter(Collider other)
 
     {
-        if(other.gameObject.CompareTag("collectable"))
+        if(other.gameObject.CompareTag("babies"))
         {
             other.gameObject.SetActive(false);
+            /*
             mCollectibleCount = mCollectibleCount - 1;
             count.text = mCollectibleCount.ToString();
+            */
+            babiesScript.activateBaby();
         }
     }
 }
