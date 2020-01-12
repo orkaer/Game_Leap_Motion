@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Leap;
 using UnityEngine.UI;
 
 public class player_controller : MonoBehaviour
