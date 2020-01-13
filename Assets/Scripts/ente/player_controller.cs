@@ -11,6 +11,7 @@ public class player_controller : MonoBehaviour
     private Rigidbody m_rigidbody;
     public int mCollectibleCount;
     public Text count;
+    public Babies babiesScript;
 
     // Start is called before the first frame update
     private void Start()
@@ -39,6 +40,7 @@ public class player_controller : MonoBehaviour
             other.gameObject.SetActive(false);
             mCollectibleCount = mCollectibleCount - 1;
             count.text = mCollectibleCount.ToString();
+            babiesScript.activateBaby();
         }
     }
 }

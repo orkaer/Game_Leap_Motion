@@ -11,9 +11,8 @@ public class player_movement : MonoBehaviour
     public Rigidbody ente;
     private palm_rotation rot;
     public GameObject obj_rot;
+    public GameObject hand;
     Vector3 defaultPos;
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +25,18 @@ public class player_movement : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime);
-        //transform.Translate(Vector3.up * Time.deltaTime, Space.World);
-        transform.rotation = obj_rot.transform.rotation;
+        if (hand.activeSelf)
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime);
+            //transform.Translate(Vector3.up * Time.deltaTime, Space.World);
 
-       
-       
+            Vector3 rot = obj_rot.transform.localRotation.eulerAngles;
+
+            float rotation = rot.y - 180f;
+
+            Debug.Log("rotation = " + rotation);
+            transform.Rotate(Vector3.up, rotation * Time.deltaTime);
+        }
     }
 
     void FixedUpdate()
@@ -40,7 +45,6 @@ public class player_movement : MonoBehaviour
         //ente.AddRelativeForce(Vector3.forward * speed);
         
     }
-    
-    
+
 }
 
