@@ -15,4 +15,11 @@ public class GameControl : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying=false;
 
 }
+    public void openMenu()
+    {
+        if (Event.current.Equals(Event.KeyboardEvent("[enter]")))
+        {
+            SceneManager.LoadScene("Start_Duck");
+        }
+    }
 }
