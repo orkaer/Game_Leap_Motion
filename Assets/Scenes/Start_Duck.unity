@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.17412782, g: 0.7059754, b: 0.8584906, a: 1}
+  m_Color: {r: 0.28773582, g: 0.8434029, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -938,8 +938,8 @@ MonoBehaviour:
     babies to hatch. One day, as she was sitting on her nest of eggs the mother duck
     felt something move beneath her. Filled with happiness, the mother duck watches
     as, one by one, her eggs hatched. She was so excited to lead her children to the
-    pond and teach them all the ways of being a duck. \n\nShe led her children into
-    the nearby pond and began to teach each duckling how to be a proper duck. They
+    bath tube and teach them all the ways of being a duck. \n\nShe led her children
+    into the bath tube and began to teach each duckling how to be a proper duck. They
     practiced swimming, diving, quacking and splashing. Through all the training they
     lost track of time. Soon the mother duck noticed that all her baby ducks swam
     in a different direction and she has to collect all her babies, one by one."
@@ -987,7 +987,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 500
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1008,13 +1008,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -91.311646}
   m_textInfo:
     textComponent: {fileID: 831831969}
-    characterCount: 707
+    characterCount: 710
     spriteCount: 0
-    spaceCount: 134
-    wordCount: 133
+    spaceCount: 135
+    wordCount: 134
     linkCount: 0
     lineCount: 12
     pageCount: 1
