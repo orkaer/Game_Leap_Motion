@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8575735577533670417}
   - component: {fileID: 7550652909919935824}
   - component: {fileID: 7526003373855108930}
+  - component: {fileID: 3408848895060333111}
   m_Layer: 0
   m_Name: babyente
   m_TagString: babies
@@ -88,8 +89,21 @@ MeshCollider:
   m_GameObject: {fileID: 6151095668318438559}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 961173119962983360, guid: 0e608202a9abe6042b16ad840f33983d, type: 3}
+--- !u!65 &3408848895060333111
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6151095668318438559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1358663, y: 1.5937539, z: 1.7182115}
+  m_Center: {x: 0.0017873346, y: 0.78347343, z: -0.0015111862}

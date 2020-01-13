@@ -35,12 +35,15 @@ public class player_controller : MonoBehaviour
     private void OnTriggerEnter(Collider other)
 
     {
-        if(other.gameObject.CompareTag("collectable"))
+        if(other.gameObject.CompareTag("babies"))
         {
             other.gameObject.SetActive(false);
+            babiesScript.activateBaby();
+            /*
             mCollectibleCount = mCollectibleCount - 1;
             count.text = mCollectibleCount.ToString();
             babiesScript.activateBaby();
+            */
         }
     }
 }
