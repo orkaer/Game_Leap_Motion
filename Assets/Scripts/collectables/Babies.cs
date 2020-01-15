@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Babies : MonoBehaviour
     
@@ -25,6 +26,11 @@ public class Babies : MonoBehaviour
 
         babies[activeBabies].SetActive(true);
         activeBabies++;
+
+        if (activeBabies >= 3)
+        {
+            SceneManager.LoadScene("endScreen");
+        }
 
     }
 

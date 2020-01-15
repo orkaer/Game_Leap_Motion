@@ -32,7 +32,7 @@ public class player_movement : MonoBehaviour
 
             Vector3 rot = obj_rot.transform.localRotation.eulerAngles;
 
-            float rotation = rot.y - 180f;
+            float rotation = rot.y -180f;
 
             Debug.Log("rotation = " + rotation);
             transform.Rotate(Vector3.up, rotation * Time.deltaTime);
