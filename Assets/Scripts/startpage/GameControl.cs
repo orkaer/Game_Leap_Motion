@@ -5,21 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
-    public void OpenLevel1()
-    {
+    public void OpenLevel1()  {
         SceneManager.LoadScene("enteenteente");
     }
+
     public void Quit() {
-    Application.Quit();
-
+        Application.Quit();
         UnityEditor.EditorApplication.isPlaying=false;
+    }
 
-}
-    public void openMenu()
-    {
+    /*public void openMenu(){
         if (Event.current.Equals(Event.KeyboardEvent("[enter]")))
         {
             SceneManager.LoadScene("Start_Duck");
         }
     }
+    */
 }
