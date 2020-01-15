@@ -27,7 +27,7 @@ public class player_movement : MonoBehaviour
     {
         if (hand.activeSelf)
         {
-            transform.Translate(Vector3.forward * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed/70);
             //transform.Translate(Vector3.up * Time.deltaTime, Space.World);
 
             Vector3 rot = obj_rot.transform.localRotation.eulerAngles;
