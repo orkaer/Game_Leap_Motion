@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Leap;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class player_controller : MonoBehaviour
 {
@@ -16,9 +17,9 @@ public class player_controller : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        m_rigidbody = gameObject.GetComponent<Rigidbody>();
-        mCollectibleCount = GameObject.FindGameObjectsWithTag("collectable").Length;
-        count.text = mCollectibleCount.ToString();
+        //m_rigidbody = gameObject.GetComponent<Rigidbody>();
+        //mCollectibleCount = GameObject.FindGameObjectsWithTag("collectable").Length;
+        //count.text = mCollectibleCount.ToString();
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class player_controller : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        m_rigidbody.AddForce(movement * m_speed);
+        //m_rigidbody.AddForce(movement * m_speed);
 }
 
     private void OnTriggerEnter(Collider other)
@@ -44,6 +45,10 @@ public class player_controller : MonoBehaviour
             count.text = mCollectibleCount.ToString();
             babiesScript.activateBaby();
             */
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

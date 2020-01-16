@@ -18,7 +18,7 @@ public class player_movement : MonoBehaviour
     void Start()
     {
         defaultPos = transform.position;
-        ente = gameObject.GetComponent<Rigidbody>();
+        //ente = gameObject.GetComponent<Rigidbody>();
         //ente.AddForce(0, 0, speed, ForceMode.Impulse);
         
     }
@@ -27,23 +27,27 @@ public class player_movement : MonoBehaviour
     {
         if (hand.activeSelf)
         {
-            transform.Translate(Vector3.forward * speed/70);
+            //transform.Translate(Vector3.forward * speed/70);
             //transform.Translate(Vector3.up * Time.deltaTime, Space.World);
 
             Vector3 rot = obj_rot.transform.localRotation.eulerAngles;
 
             float rotation = rot.y -180f;
 
-            Debug.Log("rotation = " + rotation);
-            transform.Rotate(Vector3.up, rotation * Time.deltaTime);
+            //Debug.Log("rotation = " + rotation);
+            transform.Rotate(Vector3.down, rotation * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed/70);
         }
     }
 
     void FixedUpdate()
     {
-       
+
         //ente.AddRelativeForce(Vector3.forward * speed);
-        
+        //if (hand.activeSelf)
+        //{
+        //    ente.AddForce(Vector3.forward * speed / 70f );
+        //}
     }
 
 }
